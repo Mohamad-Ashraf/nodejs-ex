@@ -2,7 +2,7 @@
   "apiVersion": "template.openshift.io/v1",
   "kind": "Template",
   "metadata": {
-    "name": "time-stack-template",
+    "name": "drupal",
     "annotations": {
       "iconClass": "icon-rails",
       "description": "A Time Tracking Solution For Your Business, Independent of an employee's location, stay organized and capture every billing hour with our cloud based application. Deploy in minutes and accelerate your efficiency by light years.",
