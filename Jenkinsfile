@@ -2,6 +2,7 @@
 def templatePath = 'https://raw.githack.com/Mohamad-Ashraf/nodejs-ex/master/drupal.json'
 // def templateName = 'nodejs-mongodb-example'
 def templateName = 'drupal'
+def DBName = 'mysql'
 
 pipeline {
   agent {
@@ -32,6 +33,9 @@ pipeline {
                   openshift.selector("all", [ template : templateName ]).delete() 
                   if (openshift.selector("secrets", templateName).exists()) { 
                     openshift.selector("secrets", templateName).delete()
+                  }
+                  if (openshift.selector("secrets", DBName).exists()) { 
+                    openshift.selector("secrets", DBName).delete()
                   }
                 }
             }
