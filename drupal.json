@@ -23,7 +23,7 @@
       "kind": "BuildConfig",
       "apiVersion": "build.openshift.io/v1",
       "metadata": {
-        "name": "time-stack-builder"
+        "name": "drupal"
       },
       "spec": {
         "output": {
