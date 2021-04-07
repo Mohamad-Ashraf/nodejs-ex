@@ -1,5 +1,5 @@
 // def templatePath = 'https://raw.githack.com/MuhammadYasser2019/nodejs-ex/master/template-nodejs.json' 
-def templatePath = 'https://raw.githack.com/MuhammadYasser2019/nodejs-ex/master/drupal.yaml'
+def templatePath = 'https://raw.githack.com/Mohamad-Ashraf/nodejs-ex/master/drupal.json'
 // def templateName = 'nodejs-mongodb-example'
 def templateName = 'drupal'
 
