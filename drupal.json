@@ -128,7 +128,7 @@
                     "mountPath": "/opt/app-root/data"
                   }
                 ],
-                "image": "image-registry.openshift-image-registry.svc:5000/drupal-prod/drupal:latest"
+                "image": "image-registry.openshift-image-registry.svc:5000/jenkins-test-0/drupal:latest"
               }
             ],
             "containers": [
