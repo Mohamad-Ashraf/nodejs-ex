@@ -211,7 +211,6 @@
         }
       },
       "spec": {
-        "host": "drupal-route-drupal-prod.apps.demo.3kdev.us",
         "to": {
           "kind": "Service",
           "name": "drupal",
