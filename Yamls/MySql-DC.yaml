@@ -3,8 +3,7 @@ apiVersion: apps.openshift.io/v1
 metadata:
   name: mysql
   labels:
-    template: mysql-persistent-template
-    template.openshift.io/template-instance-owner: e4f9934f-60f7-4861-b0ab-1e5a82aad468
+    app: mysql
 spec:
   strategy:
     type: Recreate
