@@ -57,6 +57,7 @@ pipeline {
         }
       }
     }
+    }
     stage('rollout') {
       steps {
         script {
