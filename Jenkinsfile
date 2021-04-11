@@ -22,18 +22,5 @@ oc apply -f Yamls/
       }
     }
 
-    stage('RollOut') {
-      steps {
-        script {
-          openshift.withCluster() {
-            openshift.withProject() {
-              openshift.selector("dc", "drupal").rollout().latest()
-            }
-          }
-        }
-
-      }
-    }
-
   }
 }
