@@ -41,7 +41,7 @@ spec:
       containers:
         - resources:
             limits:
-              memory: ${MEMORY_LIMIT}  
+              memory: 512Mi  
           readinessProbe:
             exec:
               command:
