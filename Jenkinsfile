@@ -48,11 +48,7 @@ pipeline {
             openshift.withCluster() {
                 openshift.withProject() {
                   openshift.selector("bc", "drupal").startBuild()
-                  timeout(5) { 
-                    builds.untilEach(1) {
-                      return (it.object().status.phase == "Complete")
-                    }
-                }
+                
             }
         }
       }
@@ -64,11 +60,7 @@ pipeline {
             openshift.withCluster() {
                 openshift.withProject() {
                   openshift.selector("dc", "drupal").rollout().latest()
-                  timeout(5) { 
-                    openshift.selector("dc", templateName).related('pods').untilEach(1) {
-                      return (it.object().status.phase == "Running")
-                    }
-                }
+               
             }
         }
       }
