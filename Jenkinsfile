@@ -1,33 +1,37 @@
 pipeline {
   agent any
   stages {
-    stage('Create') {
+    stage('CheckOut') {
       steps {
         sh '''#!/bin/bash
 oc apply -f Yamls/
 '''
       }
     }
-    stage('create') {
+
+    stage('Create') {
       steps {
         script {
-            openshift.withCluster() {
-                openshift.withProject() {
-                  openshift.selector("bc", "drupal").startBuild()
-                }
+          openshift.withCluster() {
+            openshift.withProject() {
+              openshift.selector("bc", "drupal").startBuild()
             }
+          }
         }
+
       }
     }
-    stage('rollout') {
+
+    stage('RollOut') {
       steps {
         script {
-            openshift.withCluster() {
-                openshift.withProject() {
-                  openshift.selector("dc", "drupal").rollout().latest()
-                }
+          openshift.withCluster() {
+            openshift.withProject() {
+              openshift.selector("dc", "drupal").rollout().latest()
             }
+          }
         }
+
       }
     }
 
