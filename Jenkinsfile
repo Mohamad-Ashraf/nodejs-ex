@@ -8,10 +8,26 @@ oc apply -f Yamls/
 '''
       }
     }
-
-    stage('Trigger Build') {
+    stage('create') {
       steps {
-        openshiftBuild 'drupal'
+        script {
+            openshift.withCluster() {
+                openshift.withProject() {
+                  openshift.selector("bc", "drupal").startBuild()
+                }
+            }
+        }
+      }
+    }
+    stage('rollout') {
+      steps {
+        script {
+            openshift.withCluster() {
+                openshift.withProject() {
+                  openshift.selector("dc", "drupal").rollout().latest()
+                }
+            }
+        }
       }
     }
 
