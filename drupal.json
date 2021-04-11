@@ -4,10 +4,10 @@
   "metadata": {
     "name": "drupal",
     "annotations": {
-      "iconClass": "icon-rails",
-      "description": "A Time Tracking Solution For Your Business, Independent of an employee's location, stay organized and capture every billing hour with our cloud based application. Deploy in minutes and accelerate your efficiency by light years.",
-      "openshift.io/display-name": "Time Stack",
-      "openshift.io/documentation-url": "https://github.com/Resource-Stack/time_stack.git",
+      "iconClass": "icon-php",
+      "description": "Drupal is an open source platform for building amazing digital experiences.",
+      "openshift.io/display-name": "Drupal",
+      "openshift.io/documentation-url": "https://github.com/drupal/drupal",
       "openshift.io/provider-display-name": "Cloud Niners, LLC."
     }
   },
