@@ -1,11 +1,17 @@
 pipeline {
   agent any
   stages {
-    stage('Bash') {
+    stage('Create') {
       steps {
         sh '''#!/bin/bash
 oc apply -f Yamls/
 '''
+      }
+    }
+
+    stage('Trigger Build') {
+      steps {
+        openshiftBuild 'drupal'
       }
     }
 
